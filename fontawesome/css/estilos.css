@@ -1,0 +1,386 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+background: #bed8ee;
+    font-size: 16px;
+}
+
+.square {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50px;
+	height: 50px;
+	background: linear-gradient(12deg, rgba(34,34,34,1) 0%, rgba(245,246,246,0.4430147058823529) 100%);
+}
+
+.circle {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50px;
+	height: 50px;
+	background: linear-gradient(63deg, rgba(2,0,36,1) 0%, rgba(37,37,149,0.9472163865546218) 35%, rgba(0,212,255,1) 100%);
+	border-radius: 50%;
+}
+
+.triangle {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50px;
+	height: 50px;
+	background: linear-gradient(12deg, rgba(34,193,195,1) 0%, rgba(245,246,246,0.4430147058823529) 100%);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/*---------------HEADER----------------*/
+/* header { */
+    /* background: url(../img/fondo.jpg) #49a3d6;
+    background-repeat: no-repeat;
+    background-position: center; */
+    /* background: #1976D2; */
+    /* top: 360px; */
+    /* max-height: 360px;  */
+/* } */
+header svg {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0;
+width: 100%;
+height: 660px;
+    box-sizing: border-box;
+    /* display:block; */
+    background-color: #0e4166;
+background-image: linear-gradient(to bottom, rgba(14, 65, 102, 0.86), #0e4166);
+}
+
+header .menu {
+    position: relative;
+    margin: 40px 0;
+    text-align: right;
+    z-index: 2;
+
+}
+
+header .menu a {
+    margin: 0 20px;
+    color: #fff;
+    padding-bottom: 9px;
+    display: inline-block;
+    border-bottom: 2px solid transparent;/*Para evitar el saldo de los dos pixeles apenas pase el mouse por el link se deja tranparante y se arregla con hover de abajo*/
+    text-decoration: none;
+    font-size: 1em;
+}
+
+header .menu a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+header .contenedor-texto {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 50px 0;
+    z-index: 2;
+
+}
+
+header .contenedor-texto .texto {
+    border: 5px solid rgb(255, 255, 255, 0.5);
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 60px;
+}
+
+header .contenedor-texto .texto h1,
+header .contenedor-texto .texto h2 {
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+header .contenedor-texto .texto .nombre {
+    margin-bottom: 10px;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+header .contenedor-texto .texto .profesion {
+    font-size: 25px;
+    line-height: 25px;
+}
+
+/*---------------MAIN----------------*/
+.main {
+    position: relative;
+    /* background: #1976D2; */
+} 
+
+/* .main .contenedor {
+    overflow: visible;
+/* }  */
+
+.main .acerca-de {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.main .acerca-de .foto {
+    margin-top: 10px;
+}
+
+.main .acerca-de .foto img {
+    vertical-align: top;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, .2)
+}
+
+.main .acerca-de .texto {
+    color: #232527;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    width: 80%;
+    margin: 40px auto 60px auto;
+}
+
+.main .acerca-de .texto .titulo {
+    font-size: 34px;
+    margin-bottom: 40px;
+    line-height: 34px;
+    font-weight: 600;
+    color: #f2f2f2;
+    text-align: center;
+}
+
+.main .acerca-de .texto .bold {
+    color: #0e4166;
+    text-decoration: underline;
+}
+
+
+
+.main .trabajos {
+    /* background: #0e4166; */
+    padding: 0px 0;
+}
+
+.main .trabajos .contenedor {
+    /* overflow: hidden; */
+}
+
+.main .contenedor h3 {
+    position: relative;
+    overflow: visible;
+}
+.main .trabajos .titulo {
+    font-size: 34px;
+    margin-bottom: 40px;
+    line-height: 34px;
+    font-weight: 600;
+    color: #323068;
+    text-align: center;
+}
+
+.main .trabajos .contenedor-trabajos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo {
+    overflow: visible;
+    width: 23%; 
+    margin-bottom: 40px;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .thumb {
+    overflow: visible;
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .thumb a img {
+    position: relative;
+    z-index: 3;
+    /* overflow: visible; */
+    width: 100%;
+    vertical-align: top;
+    border: 5px solid rgba(255, 255, 255, .2);
+    border-radius: 20%;
+    height: 250px;
+    
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .descripcion {
+    text-align: center;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .descripcion .nombre {
+    overflow: visible;
+    font-weight: 700;
+    color: #3895ea;
+    margin-bottom: 10px;
+}
+
+.scale-up-center {
+    animation: scale-up-center 0.4s;
+  }
+  
+  @keyframes scale-up-center {
+    0% {
+      transform: scale(.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.main .trabajos .contenedor-trabajos .trabajo .descripcion .categoria {
+    font-size: 14px;
+    color: #636363;
+}
+
+/*---------------FOOTER----------------*/
+
+footer .contacto {
+    padding: 60px 0;
+    background: #0e4166;
+}
+
+footer .contacto .titulo {
+    font-size: 34px;
+    line-height: 34px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #f2f2f2;
+    text-align: center;
+}
+
+footer .contacto .formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .contenedor .formulario input[type="text"],
+footer .contenedor .formulario input[type="email"],
+footer .contenedor .formulario textarea {
+    border: 2px solid #cecece;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 20px;
+    color: #a4a4a4;
+}
+
+footer .contenedor .formulario input[type="text"]:focus,
+footer .contenedor .formulario input[type="email"]:focus,
+footer .contenedor .formulario textarea:focus {
+    border: 2px solid #3895ea;
+}
+
+footer .contenedor .formulario input[type="text"],
+footer .contenedor .formulario input[type="email"] {
+    width: 49%;
+    margin-bottom: 15px;
+}
+
+footer .contenedor .formulario textarea {
+    width: 100%;
+    height: 100px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100px;
+    max-height: 300px;
+    margin-bottom: 15px;
+}
+
+footer .contenedor .formulario .boton {
+    margin: auto;
+    background: #3895ea;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 40px;
+    cursor: pointer;
+}
+
+footer .contenedor .formulario .boton:hover {
+    background: #387bea;
+}
+
+footer .redes-sociales {
+    background: #1e2b38;
+    padding: 60px 0;
+}
+
+footer .redes-sociales .contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+footer .redes-sociales a {
+    color: #fff;
+    text-align: center;
+    width: 100px;
+    display: block;
+    padding: 15px 0;
+    border-radius: 3px;
+    font-size: 30px;
+    margin: 0 20px;
+}
+
+footer .redes-sociales .twitter:hover {background: #1da1f2;}
+footer .redes-sociales .facebook:hover {background: #3b5998;}
+footer .redes-sociales .github:hover {background: #666666;}
+footer .redes-sociales .instagram:hover {background: #3f729b;}
+
+/*------------------MEDIA QUERIES--------------*/
+
+@media screen and (max-width: 800px) {
+    header .menu {
+        text-align: center;
+    }
+
+    .main .trabajos .contenedor-trabajos .trabajo {
+        width: 46%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header .contenedor-texto .texto .nombre {
+        font-size: 35px;
+    }
+
+    header .contenedor-texto .texto .profesion {
+        font-size: 18px;
+    }
+
+    footer .redes-sociales .contenedor {
+        flex-wrap: wrap;
+        padding: 20px 0;
+    }
+}
