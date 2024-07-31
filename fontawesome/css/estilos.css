@@ -110,6 +110,10 @@ header .contenedor-texto .texto {
     display: inline-block;
     text-align: center;
     padding: 20px 60px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 header .contenedor-texto .texto h1,
